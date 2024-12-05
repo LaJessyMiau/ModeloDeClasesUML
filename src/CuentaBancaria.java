@@ -9,10 +9,12 @@ public class CuentaBancaria {
     }
 
     private boolean retirar(double cantidad) {
+        boolean retiroAceptado = false;
+
         if (this.saldo >= cantidad) {
             this.saldo -= cantidad;
-            return true;
+            retiroAceptado = true;
         }
-        return false;
+        return retiroAceptado;
     }
 }
